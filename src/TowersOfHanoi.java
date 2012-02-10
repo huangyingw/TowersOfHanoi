@@ -1,5 +1,9 @@
 public class TowersOfHanoi {
 
+	public static void main(String[] args) {
+		move(5, 'a', 'c');// move 5 disks from pole 1 to pole 3
+	}
+
 	public static String[] move(int num, char startPole, char endPole) {
     String[] result=new String[5];
 		if (num == 1) {
@@ -11,9 +15,5 @@ public class TowersOfHanoi {
 				+ endPole);
 		move(num - 1, 'b', endPole);
 		return null;
-	}
-
-	public static void main(String[] args) {
-		move(5, 'a', 'c');// move 5 disks from pole 1 to pole 3
 	}
 }
