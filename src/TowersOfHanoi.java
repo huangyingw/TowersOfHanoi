@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class TowersOfHanoi {
 
 	public static void main(String[] args) {
+		System.out.println(move(5, "a", "c").size());
 		for (String str : move(5, "a", "c")) {
 			System.out.println(str);
 		}
