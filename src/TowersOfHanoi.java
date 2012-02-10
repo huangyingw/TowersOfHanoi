@@ -1,6 +1,7 @@
 public class TowersOfHanoi {
 
 	public static String[] move(int num, char startPole, char endPole) {
+    String[] result=new String[5];
 		if (num == 1) {
 			return null;
 		}
