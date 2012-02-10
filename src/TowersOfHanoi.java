@@ -1,19 +1,24 @@
+import java.util.ArrayList;
+
 public class TowersOfHanoi {
 
 	public static void main(String[] args) {
-		move(5, 'a', 'c');// move 5 disks from pole 1 to pole 3
+		System.out.println(move(5, 1, 3).size());
+		for (String str : move(5, 1, 3)) {
+			System.out.println(str);
+		}
 	}
 
-	public static String[] move(int num, char startPole, char endPole) {
-    String[] result=new String[5];
+	public static ArrayList<String> move(int num, int startPole, int endPole) {
+		ArrayList<String> result = new ArrayList<String>();
+		int intermediate = 6 - startPole - endPole;
 		if (num == 1) {
-			return null;
+			return result;
 		}
-		move(num - 1, startPole, 'b');
+		result.addAll(move(num - 1, startPole, intermediate));
 		move(1, startPole, endPole);
-		System.out.println("move " + num + " from " + startPole + " to "
-				+ endPole);
-		move(num - 1, 'b', endPole);
-		return null;
+		result.add("move " + num + " from " + startPole + " to " + endPole);
+		result.addAll(move(num - 1, intermediate, endPole));
+		return result;
 	}
 }
