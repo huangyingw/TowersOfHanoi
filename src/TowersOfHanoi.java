@@ -1,11 +1,11 @@
 import java.util.ArrayList;
-import java.util.Hashtable;
+import java.util.HashMap;
 
 public class TowersOfHanoi {
-	public static Hashtable<Integer, String> numbers;
+	public static HashMap<Integer, String> numbers;
 
 	public static void main(String[] args) {
-		numbers = new Hashtable<Integer, String>();
+		numbers = new HashMap<Integer, String>();
 		numbers.put(1, "a");
 		numbers.put(2, "b");
 		numbers.put(3, "c");
