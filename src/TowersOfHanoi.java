@@ -22,7 +22,6 @@ public class TowersOfHanoi {
 			return result;
 		}
 		result.addAll(move(num - 1, startPole, intermediate));
-		move(1, startPole, endPole);
 		result.add("move " + num + " from " + numbers.get(startPole) + " to "
 				+ numbers.get(endPole));
 		result.addAll(move(num - 1, intermediate, endPole));
